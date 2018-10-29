@@ -1,0 +1,2 @@
+module SeenAnimalsHelper
+end

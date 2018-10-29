@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Species:</strong>
+  <%= @seen_animal.species %>
+</p>
+
+<p>
+  <strong>Count of times seen:</strong>
+  <%= @seen_animal.count_of_times_seen %>
+</p>
+
+<p>
+  <strong>Location of last seen:</strong>
+  <%= @seen_animal.location_of_last_seen %>
+</p>
+
+<%= link_to 'Edit', edit_seen_animal_path(@seen_animal) %> |
+<%= link_to 'Back', seen_animals_path %>

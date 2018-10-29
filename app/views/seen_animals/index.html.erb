@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Seen Animals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Species</th>
+      <th>Count of times seen</th>
+      <th>Location of last seen</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @seen_animals.each do |seen_animal| %>
+      <tr>
+        <td><%= seen_animal.species %></td>
+        <td><%= seen_animal.count_of_times_seen %></td>
+        <td><%= seen_animal.location_of_last_seen %></td>
+        <td><%= link_to 'Show', seen_animal %></td>
+        <td><%= link_to 'Edit', edit_seen_animal_path(seen_animal) %></td>
+        <td><%= link_to 'Destroy', seen_animal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Seen Animal', new_seen_animal_path %>
